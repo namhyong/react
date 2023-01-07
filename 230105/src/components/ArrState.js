@@ -9,7 +9,9 @@ export default function ArrState() {
       <br />
       <button
         onClick={() => {
-          setState([1]);
+          state[0] = 1;
+          const copyArr = [...state];
+          setState(copyArr);
           console.log(state);
         }}
       >

@@ -19,7 +19,7 @@ console.log(arr === copyArr);
 
 function foo(a, b, c, d, e, f, g) {}
 //는 아래와 같이 쓸 수 있다.
-function foo(a, b, ...rest) {
+function foo1(a, b, ...rest) {
   rest = { c: 'dd', d: 'dd' };
 }
 

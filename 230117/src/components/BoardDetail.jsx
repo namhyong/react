@@ -1,0 +1,14 @@
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import Header from './Header';
+
+export default function BoardDetail() {
+  const {boardID} = useParams(); //구조 분해 할당
+    //console.log(params);
+  return (
+    <>
+    <Header />
+    <h2> {boardID}번 글입니다.</h2>
+    </>
+  )
+}

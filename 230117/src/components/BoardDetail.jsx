@@ -12,3 +12,6 @@ export default function BoardDetail() {
     </>
   )
 }
+//App.js에서 params가(/:) boardID로 설정되어 있기 때문에  useParams를 쓰게 되면,
+//boardID가 키,값으로 저장되어 넘어오고 구조분해 할당을 안하면, boardID.boardID가 되고
+//구조분해 할당을 하게 되면, boardID가 된다.

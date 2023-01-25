@@ -3,7 +3,7 @@ import './App.css';
 import ArrState from './components/ArrState';
 import ObjectState from './components/ObjectState';
 
-// import Ex2 from './components/Ex2';
+import Ex2 from './components/Ex2';
 // import ClassState from './components/ClassState';
 import StateAndVariable from './components/StateAndVariable';
 
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <ObjectState />
+      <ArrState/>
     </div>
   );
 }

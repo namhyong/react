@@ -15,7 +15,7 @@ import TestUseEffect from './Components/TestUseEffect';
 function App() {
   return (
     <div className="App">
-      <ExUnmount />
+      <ShowTimer />
     </div>
   );
 }

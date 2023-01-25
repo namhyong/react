@@ -4,7 +4,7 @@ export default function Quiz() {
     const firstRandomNumber = Math.floor(Math.random()*10);
     const secondRandomNumber = Math.floor(Math.random()*10);
     const arithmeticArr = ['+','-','*'];  //사칙연산 배열 3개
-    const arithmetic = Math.floor(Math.random()* 3);  //3까지의 숫자가 랜덤으로 선택하게 하는 코드
+    const arithmetic = Math.floor(Math.random()* 3);  //0~2까지의 숫자가 랜덤으로 선택하게 하는 코드
     
     let answer = 0;
     if (arithmetic === 0) {   //arithmetic에서 랜덤으로 뽑은 인덱스 번호로 +,-,* 일때 각각 계산되는 과정

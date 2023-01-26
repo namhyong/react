@@ -29,7 +29,7 @@ export default function Mbti() {
                 return <li key={index}>
                     <SkyblueButton text={el.text}
                     clickEvent={()=>{
-                        dispatch(check(el.result)) // dispatch를 통해 
+                        dispatch(check(el.result)) 
                         dispatch(next())}}/>
                     {index === 0 && <Vs>VS</Vs>}
                 </li>

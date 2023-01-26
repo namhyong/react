@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"></script>
+        <style>
+            .container {
+                border: 3px solid black;
+                padding: 10px;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="red">
+            <div class="container" id="component_red">
+                <h1>red</h1>
+                <input type="button" value="실행" onclick="store.dispatch({type:'CHANGE', color:'red'})">
+            </div>
+        </div>
+        <div id="green">
+            <div class="container" id="component_green">
+                <h1>green</h1>
+                <input type="button" value="실행" onclick="store.dispatch({type:'CHANGE', color:'green'});">
+            </div>
+        </div>
+        <div id="yellow">
+            <div class="container" id="component_yellow">
+                <h1>yellow</h1>
+                <input type="button" value="실행" onclick="store.dispatch({type:'CHANGE', color:'yellow'});">
+            </div>
+        </div>
+        <script>
+            function reducer(state = {color:'orange'}, action){
+                console.log(action)
+              if(action.type == 'CHANGE') return {color:action.color} // react가 아니기 때문에 자동으로 rendering이 안되기 때문에 subscribe를 사용해야 한다.
+                return state;
+            }
+            var store = Redux.createStore(reducer);
+
+            function red(){
+                var state= store.getState()
+                document.querySelector('#component_red').style.backgroundColor = state.color;
+
+            }
+            function green(){
+                var state= store.getState()
+                document.querySelector('#component_green').style.backgroundColor = state.color;
+
+            }
+            function yellow(){
+
+                var state= store.getState()
+                document.querySelector('#component_yellow').style.backgroundColor = state.color;
+
+            }
+            
+            store.subscribe(red); //red 함수
+            store.subscribe(green) //green 함수
+            store.subscribe(yellow) // yellow 함수
+
+            alert(store.getState().color)   //reducer의 초기 state를 orange로 정했기 때문에 store의 getState의 color는 orange로 가져온다.
+        </script>
+    </body>
+</html>
